@@ -1,0 +1,64 @@
+*{
+    margin:0;
+    padding:0;
+    color: #FFF0C4;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color:#3E0703;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    padding: 100px;
+    background-color: #660B05;
+    /*background-image: url(https://i.ibb.co/svF6w9zK/01-lace-border-frame-on-a-red-background-removebg-preview.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1040px 450px;*/
+    text-align: center;
+    margin-top: 110px;
+    margin-bottom: 50px;
+    margin-left: 300px;
+    margin-right: 300px;
+    border-radius: 15px;
+}
+
+.minisquare{
+    margin: 0;
+    background-color: #8C1007;
+    padding: 90px;
+    border-radius: 15px;
+}
+
+.square{
+    border-radius: 15px;
+}
+
+input{
+    padding: 30px 30px;
+    font-size: 40px;
+    background-color: #FFF0C4;
+    color: #3E0703;
+    border:none;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+
+}
+
+button{
+    background-color: #FFF0C4;
+    color: #660B05;
+    padding: 10px 227px;
+    border: none;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    
+}
+button:hover{
+    background-color: #660B05;
+    color: #FFF0C4;
+    cursor: pointer;
+}
