@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const expected = 'daria'; // change this value if you want a different password
 
         if (val.toLowerCase() === expected) {
-            window.location.href = 'messages.html';
+            window.location.href = 'wishes.html';
         } else {
             window.location.href = 'uhoh.html';
         }
