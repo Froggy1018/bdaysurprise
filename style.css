@@ -7,30 +7,36 @@
 
 body{
     background-color:#3E0703;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .container{
-    padding: 100px;
+    padding: min(100px, 5vh);
     background-color: #660B05;
     /*background-image: url(https://i.ibb.co/svF6w9zK/01-lace-border-frame-on-a-red-background-removebg-preview.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 1040px 450px;*/
     text-align: center;
-    margin-top: 110px;
-    margin-bottom: 50px;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin: 5vh auto;
+    width: min(80%, 800px);
     border-radius: 15px;
+    box-sizing: border-box;
 }
 
 .minisquare{
     margin: 0;
     background-color: #8C1007;
-    padding: 90px;
+    padding: min(90px, 5vh);
     border-radius: 15px;
+    box-sizing: border-box;
 }
 
 .square{
@@ -38,24 +44,26 @@ body{
 }
 
 input{
-    padding: 30px 30px;
-    font-size: 40px;
+    padding: min(30px, 3vh) min(30px, 5vw);
+    font-size: min(40px, 6vw);
     background-color: #FFF0C4;
     color: #3E0703;
-    border:none;
+    border: none;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
-
+    width: min(100%, 400px);
+    box-sizing: border-box;
 }
 
 #submit{
     background-color: #FFF0C4;
     color: #660B05;
-    padding: 10px 227px;
+    padding: min(10px, 2vh) min(20px, 3vw);
     border: none;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
-    
+    width: min(100%, 400px);
+    box-sizing: border-box;
 }
 #submit:hover{
     background-color: #660B05;
@@ -64,34 +72,43 @@ input{
 }
 
 #next{
-    padding: 10px 20px;
-    font-size: 40px;
+    padding: min(10px, 2vh) min(20px, 3vw);
+    font-size: min(40px, 6vw);
     background-color: #660B05;
     color: #FFF0C4;
-    border:none;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    margin-top: 30px;
-    width: 100%;
+    border: none;
+    border-radius: 15px;
+    margin-top: min(30px, 4vh);
+    width: min(100%, 400px);
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    -webkit-tap-highlight-color: transparent; /* for iOS tap effect */
 
     &:hover{
         background-color: #FFF0C4;
         color: #660B05;
+    }
+
+    /* Add active state for touch devices */
+    &:active{
+        background-color: #FFF0C4;
+        color: #660B05;
+        transform: scale(0.98);
     }
 }
 
 #square{
     border: #660B05 solid 2px;
     background-color: #660B05;
-    width: 400px;
-    height: 400px;
-    padding: 20px;
-    margin-top: 20px;
-    margin-left: 20px;
+    width: min(400px, 90vw);
+    height: min(400px, 90vw);
+    padding: min(20px, 3vw);
+    margin: 20px auto;
     align-content: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    transform: 0.3s ease-out;
-    font-size: 25px;
+    transition: 0.3s ease-out;
+    font-size: min(25px, 4vw);
+    box-sizing: border-box;
 
     &:hover{
         transform: translateY(-5px);
@@ -100,14 +117,22 @@ input{
 
 #notes{
     display: flex;
-    margin-left: 55px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: min(20px, 3vw);
 }
 
 #messages{
-    margin-top: 20px;
+    margin-top: min(20px, 3vh);
+    padding: min(15px, 2vw);
+    box-sizing: border-box;
+    
     h1{
-        font-size: 60px;
+        font-size: min(60px, 8vw);
         text-align: center;
+        line-height: 1.2;
+        margin-bottom: min(20px, 3vh);
     }
 }
 
@@ -134,11 +159,14 @@ input{
 
 .confetti-piece{
     position: absolute;
-    width: 10px;
-    height: 20px;
+    width: min(10px, 2vw);
+    height: min(20px, 4vw);
     background: var(--confetti-color, red);
     opacity: 0.9;
-    animation: confetti-fall var(--fall-duration, 4s)linear infinite;
+    animation: confetti-fall var(--fall-duration, 4s) linear infinite;
+    will-change: transform; /* Optimize animation performance */
+    transform: translateZ(0); /* Standard transform */
+    -webkit-transform: translateZ(0); /* iOS animation performance */
 }
 
 .confetti-piece:nth-child(1) {

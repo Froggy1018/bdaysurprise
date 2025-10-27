@@ -7,21 +7,38 @@
 
 body{
     background-color:#3E0703;
-    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     overflow: hidden;
+    -webkit-text-size-adjust: 100%; /* Prevent iOS font scaling */
 }
 
 #next{
-    margin-top: 10px;
-    margin-left: 10px;
-    padding: 10px 20px;
-    font-size: 40px;
+    margin: min(10px, 2vh);
+    padding: min(10px, 2vh) min(20px, 4vw);
+    font-size: min(40px, 6vw);
     background-color: #660B05;
     color: #FFF0C4;
-    border:none;
+    border: none;
     border-radius: 15px;
+    transition: all 0.3s ease;
+    -webkit-tap-highlight-color: transparent; /* Remove iOS tap highlight */
+    cursor: pointer;
 
     &:hover{
+        background-color: #FFF0C4;
+        color: #660B05;
+    }
+
+    /* Add touch feedback */
+    &:active{
+        transform: scale(0.98);
         background-color: #FFF0C4;
         color: #660B05;
     }
@@ -50,11 +67,15 @@ body{
 
 .confetti-piece{
     position: absolute;
-    width: 10px;
-    height: 20px;
+    width: min(10px, 2vw);
+    height: min(20px, 4vw);
     background: var(--confetti-color, red);
     opacity: 0.9;
-    animation: confetti-fall var(--fall-duration, 4s)linear infinite;
+    animation: confetti-fall var(--fall-duration, 4s) linear infinite;
+    will-change: transform; /* Optimize animation performance */
+    transform: translateZ(0); /* Standard transform */
+    -webkit-transform: translateZ(0); /* iOS animation performance */
+    border-radius: 2px; /* Smooth edges */
 }
 
 .confetti-piece:nth-child(1) {
@@ -84,26 +105,29 @@ body{
 }
 
 .container{
-    padding: 100px;
+    padding: min(100px, 5vh);
     background-color: #660B05;
     text-align: center;
-    margin-top: 110px;
-    margin-bottom: 50px;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin: 5vh auto;
+    width: min(80%, 800px);
     border-radius: 15px;
+    box-sizing: border-box;
 }
+
 .minisquare{
     margin: 0;
     background-color: #8C1007;
-    padding: 90px;
+    padding: min(90px, 5vh);
     border-radius: 15px;
+    box-sizing: border-box;
 
     h1{
-        font-size: 90px;
+        font-size: min(90px, 10vw);
+        line-height: 1.2;
+        margin-bottom: min(20px, 3vh);
     }
 
     button{
-        margin-top: 50px;
+        margin-top: min(50px, 6vh);
     }
 }
