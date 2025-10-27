@@ -80,14 +80,15 @@ input{
 #square{
     border: #660B05 solid 2px;
     background-color: #660B05;
-    width: 250px;
-    height: 250px;
-    padding: 10px;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
     margin-top: 20px;
     margin-left: 20px;
     align-content: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     transform: 0.3s ease-out;
+    font-size: 25px;
 
     &:hover{
         transform: translateY(-5px);
@@ -96,4 +97,13 @@ input{
 
 #notes{
     display: flex;
+    margin-left: 55px;
+}
+
+#messages{
+    margin-top: 20px;
+    h1{
+        font-size: 60px;
+        text-align: center;
+    }
 }
