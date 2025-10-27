@@ -48,7 +48,7 @@ input{
 
 }
 
-button{
+#submit{
     background-color: #FFF0C4;
     color: #660B05;
     padding: 10px 227px;
@@ -57,8 +57,43 @@ button{
     border-bottom-left-radius: 15px;
     
 }
-button:hover{
+#submit:hover{
     background-color: #660B05;
     color: #FFF0C4;
     cursor: pointer;
+}
+
+#next{
+    padding: 10px 20px;
+    font-size: 40px;
+    background-color: #660B05;
+    color: #FFF0C4;
+    border:none;
+    border-radius: 15px;
+
+    &:hover{
+        background-color: #FFF0C4;
+        color: #660B05;
+    }
+}
+
+#square{
+    border: #660B05 solid 2px;
+    background-color: #660B05;
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    align-content: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    transform: 0.3s ease-out;
+
+    &:hover{
+        transform: translateY(-5px);
+    }
+}
+
+#notes{
+    display: flex;
 }
