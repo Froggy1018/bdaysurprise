@@ -100,8 +100,8 @@ input{
 #square{
     border: #660B05 solid 2px;
     background-color: #660B05;
-    width: min(400px, 90vw);
-    height: min(400px, 90vw);
+    width: min(500px, 90vw);
+    height: min(500px, 90vw);
     padding: min(20px, 3vw);
     margin: 20px auto;
     align-content: center;
@@ -193,4 +193,23 @@ input{
   left: 80%;
   --confetti-color: #ff69b4;
   --fall-duration: 6s;
+}
+
+#photonvid{
+    padding: 20px 40px;
+    border-radius: 15px;
+    font-size: 100px;
+    color: #FFF0C4;
+    background-color: #660B05;
+    border: none;
+    
+    &:hover{
+        background-color: #FFF0C4;
+        color: #660B05;
+        cursor: pointer;
+    }
+}
+
+#smallwar{
+    margin-top: 20px;
 }
