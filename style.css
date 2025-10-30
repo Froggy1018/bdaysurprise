@@ -71,7 +71,7 @@ input{
     cursor: pointer;
 }
 
-#next{
+#next, #back{
     padding: min(10px, 2vh) min(20px, 3vw);
     font-size: min(40px, 6vw);
     background-color: #660B05;
